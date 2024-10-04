@@ -1,5 +1,7 @@
+local constants = require("constants")
+
 function love.load()
-    love.window.setMode(1280, 720, { highdpi = true })
+    love.window.setMode(constants.width, constants.height, { highdpi = true })
     love.window.setTitle("Ludum Dare 56")
 end
 
