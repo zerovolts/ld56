@@ -1,5 +1,7 @@
+local global = require("global")
 local constants = require("constants")
 local Button = require("button")
+local Game = require("game")
 
 local MainMenu = {}
 
@@ -10,7 +12,7 @@ function MainMenu:load()
         "Play",
         constants.width / 2,
         constants.height / 2,
-        function() end,
+        function() global.loadScene(Game) end,
         { font = love.graphics.newFont(20) }
     ))
 end
